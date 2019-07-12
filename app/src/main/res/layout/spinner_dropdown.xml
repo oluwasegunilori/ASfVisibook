@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<TextView android:id="@android:id/text1"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_gravity="center_horizontal|center_vertical"
+    android:gravity="center"
+    android:background="@drawable/spinneritem_divider"
+    android:textColor="@color/colorPrimary"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+</TextView>
+
+

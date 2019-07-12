@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".UserDetails">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@android:color/white"
+        android:fitsSystemWindows="true"
+        android:theme="@style/MyAppBarLayoutTheme">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:titleEnabled="false">
+
+            <ImageView
+                android:id="@+id/backdrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                android:transitionName="img"
+                app:layout_collapseMode="parallax"
+                tools:ignore="UnusedAttribute" />
+
+            <RelativeLayout
+                android:id="@+id/headerContent"
+                android:layout_width="match_parent"
+                android:background="@drawable/homebackground"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:fitsSystemWindows="true"
+                android:orientation="vertical"
+                app:layout_collapseMode="pin">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/profileicon"
+                    />
+
+
+
+
+
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:contentInsetStart="0dp"
+                android:contentInsetLeft="0dp"
+                app:contentInsetLeft="0dp"
+                app:titleTextColor="@color/white"
+                app:contentInsetStart="0dp"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:scrollbarSize="5dp"
+        android:fadeScrollbars="false"
+        android:scrollbarThumbVertical="@color/colorPrimary"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:fitsSystemWindows="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:focusableInTouchMode="true"
+                    android:background="@color/grey_300"
+                    android:orientation="horizontal">
+
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:gravity="left"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:hint="NAME"
+                        android:inputType="text"
+                       android:textColor="@color/colorPrimary"
+                        app:met_bottomTextSize="0sp"
+                        android:textSize="16sp"
+                        app:met_baseColor="@android:color/black"
+                        app:met_floatingLabel="highlight"
+                        app:met_primaryColor="@color/colorPrimary"
+                        app:met_singleLineEllipsis="true"
+                        app:met_textColor="#37474f"
+
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal">
+
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/name"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:gravity="left"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:inputType="text"
+                        app:met_bottomTextSize="0sp"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        app:met_baseColor="@android:color/black"
+                        app:met_floatingLabel="highlight"
+                        app:met_primaryColor="@color/colorPrimary"
+                        app:met_singleLineEllipsis="true"
+                        app:met_textColor="#37474f"
+
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:focusableInTouchMode="true"
+                    android:background="@color/grey_300"
+                    android:orientation="horizontal">
+
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:gravity="left"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:hint="SEX"
+                        android:inputType="text"
+                        android:textColor="@color/colorPrimary"
+                        app:met_bottomTextSize="0sp"
+                        android:textSize="16sp"
+                        app:met_baseColor="@android:color/black"
+                        app:met_floatingLabel="highlight"
+                        app:met_primaryColor="@color/colorPrimary"
+                        app:met_singleLineEllipsis="true"
+                        app:met_textColor="#37474f"
+
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal">
+
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/sex"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:gravity="left"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:inputType="text"
+                        app:met_bottomTextSize="0sp"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        app:met_baseColor="@android:color/black"
+                        app:met_floatingLabel="highlight"
+                        app:met_primaryColor="@color/colorPrimary"
+                        app:met_singleLineEllipsis="true"
+                        app:met_textColor="#37474f"
+
+                        />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:focusableInTouchMode="true"
+                    android:background="@color/grey_300"
+                    android:orientation="horizontal">
+
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:gravity="left"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:hint="BIRTHDAY"
+                        android:inputType="text"
+                        android:textColor="@color/colorPrimary"
+                        app:met_bottomTextSize="0sp"
+                        android:textSize="16sp"
+                        app:met_baseColor="@android:color/black"
+                        app:met_floatingLabel="highlight"
+                        app:met_primaryColor="@color/colorPrimary"
+                        app:met_singleLineEllipsis="true"
+                        app:met_textColor="#37474f"
+
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal">
+
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/birthday"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:gravity="left"
+                        android:editable="false"
+                        android:focusable="false"
+                       android:inputType="text"
+                        app:met_bottomTextSize="0sp"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        app:met_baseColor="@android:color/black"
+                        app:met_floatingLabel="highlight"
+                        app:met_primaryColor="@color/colorPrimary"
+                        app:met_singleLineEllipsis="true"
+                        app:met_textColor="#37474f"
+
+                        />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:focusableInTouchMode="true"
+                    android:background="@color/grey_300"
+                    android:orientation="horizontal">
+
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:gravity="left"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:hint="PHONE NUMBER"
+                        android:inputType="text"
+                        android:textColor="@color/colorPrimary"
+                        app:met_bottomTextSize="0sp"
+                        android:textSize="16sp"
+                        app:met_baseColor="@android:color/black"
+                        app:met_floatingLabel="highlight"
+                        app:met_primaryColor="@color/colorPrimary"
+                        app:met_singleLineEllipsis="true"
+                        app:met_textColor="#37474f"
+
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal">
+
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/phonenumber"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:gravity="left"
+                        android:editable="false"
+                        android:focusable="false"
+
+                        android:inputType="text"
+                        app:met_bottomTextSize="0sp"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        app:met_baseColor="@android:color/black"
+                        app:met_floatingLabel="highlight"
+                        app:met_primaryColor="@color/colorPrimary"
+                        app:met_singleLineEllipsis="true"
+                        app:met_textColor="#37474f"
+
+                        />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.15"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_call_blue_24dp"
+                        android:onClick="call"
+                        />
+
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.15"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_message_blue_24dp"
+                        android:onClick="message"
+                        />
+                </LinearLayout>
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:focusableInTouchMode="true"
+                    android:background="@color/grey_300"
+                    android:orientation="horizontal">
+
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:gravity="left"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:hint="EMAIl"
+                        android:inputType="text"
+                        android:textColor="@color/colorPrimary"
+                        app:met_bottomTextSize="0sp"
+                        android:textSize="16sp"
+                        app:met_baseColor="@android:color/black"
+                        app:met_floatingLabel="highlight"
+                        app:met_primaryColor="@color/colorPrimary"
+                        app:met_singleLineEllipsis="true"
+                        app:met_textColor="#37474f"
+
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal">
+
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/email"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.85"
+                        android:gravity="left"
+                        android:editable="false"
+                        android:focusable="false"
+
+                        android:inputType="text"
+                        app:met_bottomTextSize="0sp"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        app:met_baseColor="@android:color/black"
+                        app:met_floatingLabel="highlight"
+                        app:met_primaryColor="@color/colorPrimary"
+                        app:met_singleLineEllipsis="true"
+                        app:met_textColor="#37474f"
+
+                        />
+
+
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.15"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_contact_mail_black_24dp"
+                        android:onClick="email"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:focusableInTouchMode="true"
+                    android:background="@color/grey_300"
+                    android:orientation="horizontal">
+
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:gravity="left"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:hint="FACULTY"
+                        android:inputType="text"
+                        android:textColor="@color/colorPrimary"
+                        app:met_bottomTextSize="0sp"
+                        android:textSize="16sp"
+                        app:met_baseColor="@android:color/black"
+                        app:met_floatingLabel="highlight"
+                        app:met_primaryColor="@color/colorPrimary"
+                        app:met_singleLineEllipsis="true"
+                        app:met_textColor="#37474f"
+
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal">
+
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/faculty"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        android:gravity="left"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:inputType="text"
+                        app:met_bottomTextSize="0sp"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        app:met_baseColor="@android:color/black"
+                        app:met_floatingLabel="highlight"
+                        app:met_primaryColor="@color/colorPrimary"
+                        app:met_singleLineEllipsis="true"
+                        app:met_textColor="#37474f"
+
+                        />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:focusableInTouchMode="true"
+                    android:background="@color/grey_300"
+                    android:orientation="horizontal">
+
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:gravity="left"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:hint="DEPARTMENT"
+                        android:inputType="text"
+                        android:textColor="@color/colorPrimary"
+                        app:met_bottomTextSize="0sp"
+                        android:textSize="16sp"
+                        app:met_baseColor="@android:color/black"
+                        app:met_floatingLabel="highlight"
+                        app:met_primaryColor="@color/colorPrimary"
+                        app:met_singleLineEllipsis="true"
+                        app:met_textColor="#37474f"
+
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal">
+
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/department"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:gravity="left"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:inputType="text"
+                        app:met_bottomTextSize="0sp"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        app:met_baseColor="@android:color/black"
+                        app:met_floatingLabel="highlight"
+                        app:met_primaryColor="@color/colorPrimary"
+                        app:met_singleLineEllipsis="true"
+                        app:met_textColor="#37474f"
+
+                        />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:focusableInTouchMode="true"
+                    android:background="@color/grey_300"
+                    android:orientation="horizontal">
+
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:gravity="left"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:hint="ADDRESS"
+                        android:inputType="text"
+                        android:textColor="@color/colorPrimary"
+                        app:met_bottomTextSize="0sp"
+                        android:textSize="16sp"
+                        app:met_baseColor="@android:color/black"
+                        app:met_floatingLabel="highlight"
+                        app:met_primaryColor="@color/colorPrimary"
+                        app:met_singleLineEllipsis="true"
+                        app:met_textColor="#37474f"
+
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal">
+
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/address"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        android:gravity="left"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:minLines="1"
+                        android:inputType="text"
+                        app:met_bottomTextSize="0sp"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp"
+                        app:met_baseColor="@android:color/black"
+                        app:met_floatingLabel="highlight"
+                        app:met_primaryColor="@color/colorPrimary"
+                        app:met_singleLineEllipsis="true"
+                        app:met_textColor="#37474f"
+
+                        />
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:focusableInTouchMode="true"
+                    android:background="@color/grey_300"
+                    android:orientation="horizontal">
+
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:gravity="left"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:hint="PART"
+                        android:inputType="text"
+                        android:textColor="@color/colorPrimary"
+                        app:met_bottomTextSize="0sp"
+                        android:textSize="16sp"
+                        app:met_baseColor="@android:color/black"
+                        app:met_floatingLabel="highlight"
+                        app:met_primaryColor="@color/colorPrimary"
+                        app:met_singleLineEllipsis="true"
+                        app:met_textColor="#37474f"
+
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal">
+
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/part"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:gravity="left"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:inputType="text"
+                        app:met_bottomTextSize="0sp"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        app:met_baseColor="@android:color/black"
+                        app:met_floatingLabel="highlight"
+                        app:met_primaryColor="@color/colorPrimary"
+                        app:met_singleLineEllipsis="true"
+                        app:met_textColor="#37474f"
+
+                        />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:focusableInTouchMode="true"
+                    android:background="@color/grey_300"
+                    android:orientation="horizontal">
+
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:gravity="left"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:hint="POST HELD"
+                        android:inputType="text"
+                        android:textColor="@color/colorPrimary"
+                        app:met_bottomTextSize="0sp"
+                        android:textSize="16sp"
+                        app:met_baseColor="@android:color/black"
+                        app:met_floatingLabel="highlight"
+                        app:met_primaryColor="@color/colorPrimary"
+                        app:met_singleLineEllipsis="true"
+                        app:met_textColor="#37474f"
+
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal">
+
+
+                    <com.rengwuxian.materialedittext.MaterialEditText
+                        android:id="@+id/postheld"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:gravity="left"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:inputType="text"
+                        app:met_bottomTextSize="0sp"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp"
+                        app:met_baseColor="@android:color/black"
+                        app:met_floatingLabel="highlight"
+                        app:met_primaryColor="@color/colorPrimary"
+                        app:met_singleLineEllipsis="true"
+                        app:met_textColor="#37474f"
+
+                        />
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>

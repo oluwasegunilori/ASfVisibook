@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Excos"
+    android:background="@color/white"
+    >
+
+
+    <android.support.v7.widget.Toolbar
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:contentInsetLeft="0dp"
+        app:titleTextColor="@color/white"
+        app:contentInsetStart="0dp"
+        app:layout_collapseMode="pin"
+        android:background="@color/colorPrimary"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <in.myinnos.alphabetsindexfastscrollrecycler.IndexFastScrollRecyclerView
+
+        android:id="@+id/excos_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_margin="5dp"
+        android:layout_marginRight="0dp"
+        />
+
+
+
+</RelativeLayout>

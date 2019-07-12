@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "647827044089",
+    "firebase_url": "https://asfvisibook.firebaseio.com",
+    "project_id": "asfvisibook",
+    "storage_bucket": "asfvisibook.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:647827044089:android:8f1384d6ce2f7d6a",
+        "android_client_info": {
+          "package_name": "com.asfvisibook.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "647827044089-h1ghmle4mj105d2eqpkj9h34p9hpcbgb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.asfvisibook.android",
+            "certificate_hash": "c8fa15a88232b9bb19bac58b6dc316100c94effe"
+          }
+        },
+        {
+          "client_id": "647827044089-9fe6rr3llnussmhqb3662omiqlb7nqk8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2Ofh-nHe3nNwAatmFnq--BhnrzUItP2c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "647827044089-9fe6rr3llnussmhqb3662omiqlb7nqk8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

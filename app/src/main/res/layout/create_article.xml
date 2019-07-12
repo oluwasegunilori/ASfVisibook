@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".CreateArticle">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:focusableInTouchMode="true"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:focusedByDefault="false"
+        android:id="@+id/titlecontainer"
+        >
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:hint="Title of Article"
+            android:text=""
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            app:met_baseColor="@android:color/black"
+            app:met_bottomTextSize="10sp"
+            app:met_floatingLabel="highlight"
+            app:met_primaryColor="@color/black"
+            app:met_singleLineEllipsis="true"
+            app:met_textColor="@color/colorPrimary"
+            app:met_textColorHint="@color/colorPrimary"
+            tools:layout_editor_absoluteX="3dp" />
+
+    </android.support.constraint.ConstraintLayout>
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_margin="10dp"
+    app:layout_constraintHeight_percent="0.1"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/titlecontainer"
+    android:id="@+id/authorcontainer"
+    >
+
+    <com.rengwuxian.materialedittext.MaterialAutoCompleteTextView
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/author"
+       android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:drawableRight="@drawable/ic_arrow_drop_down_circle_black_24dp"
+        android:gravity="left"
+        android:hint="Author"
+        android:inputType="text"
+        android:padding="5dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/colorPrimary"
+        android:textSize="16sp"
+        app:met_baseColor="@color/colorPrimary"
+        app:met_bottomTextSize="9sp"
+        app:met_errorColor="@color/red_400"
+        app:met_floatingLabel="highlight"
+        app:met_primaryColor="@color/colorPrimary"
+        app:met_singleLineEllipsis="true"
+        app:met_textColor="#37474f"
+
+        tools:layout_editor_absoluteY="-1dp" />
+
+
+</android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/authorcontainer"
+        android:id="@+id/chooseimagecontainer"
+        >
+
+    <LinearLayout
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/uploadcontainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:background="#E0E0E0"
+        android:layout_marginTop="20dp"
+
+        >
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:layout_marginLeft="20dp"
+            android:layout_height="wrap_content"
+            android:text="Choose Image"
+            android:id="@+id/chooseimage"
+            android:textColor="@android:color/white"
+            android:layout_gravity="left"
+            android:onClick="chooseImage"
+            android:textStyle="bold"
+
+            />
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:id="@+id/uploadstatus"
+            android:visibility="gone"
+            android:layout_marginLeft="20dp"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:layout_gravity="right"
+
+            />
+
+    </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/detailscontainer"
+        app:layout_constraintHeight_percent="0.6"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chooseimagecontainer"
+
+        >
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/articledetails"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fadeScrollbars="false"
+            android:gravity="top"
+            android:hint="Article Details"
+            android:lineSpacingExtra="2dp"
+            android:lineSpacingMultiplier="2.5"
+            android:minLines="1"
+            android:padding="5dp"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbarSize="5dp"
+            android:scrollbarThumbVertical="@color/colorPrimary"
+            android:scrollbars="vertical"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:met_baseColor="@android:color/black"
+            app:met_bottomTextSize="9sp"
+            app:met_errorColor="@color/red_500"
+            app:met_floatingLabel="highlight"
+            app:met_primaryColor="@color/colorPrimary"
+            app:met_singleLineEllipsis="true"
+            app:met_textColor="#37474f"
+            app:met_textColorHint="@color/colorPrimary"
+ />
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detailscontainer"
+
+        >
+
+    <info.hoang8f.widget.FButton
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:fButtonColor="@android:color/white"
+        android:text="PUBLISH"
+        android:onClick="createArticle"
+        android:outlineAmbientShadowColor="@color/colorPrimary"
+        android:textColor="@color/colorPrimary"
+        android:layout_height="wrap_content" />
+    </android.support.constraint.ConstraintLayout>
+
+    <include layout="@layout/transparentlayout">
+
+    </include>
+
+</android.support.constraint.ConstraintLayout>
